@@ -1,0 +1,149 @@
+@import "bootstrap";
+
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+$lightGray: #999;
+
+html {
+	overflow-y: scroll;
+}
+
+body {
+	
+	padding-top: 60px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+	
+	line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $grayLight;
+}
+
+/* boxes as per Hartl mixin allows it to be used elsewhere in SASS*/
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  height: auto;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+ }
+
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  a {
+    color: $gray;
+    &:hover { 
+      color: $grayDarker;
+    }
+  }  
+  small { 
+    float: left; 
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+
+/* stuff for autocomplete, locations/new */
+
+.ui-autocomplete-input, .input input {
+  border: none;
+  font-size: 14px;
+  width: 300px;
+  height: 24px;
+  margin-bottom: 5px;
+  padding-top: 2px;
+}
+
+.ui-autocomplete-input {
+  border: 1px solid #DDD !important;
+  padding-top: 0px !important;
+}
+
+#map {
+  border: 1px solid #DDD;
+  width:300px;
+  height: 300px;
+  float:left;
+  margin: 0px 0 0 10px;
+  -webkit-box-shadow: #AAA 0px 0px 15px;
+}
+
+#legend {
+  float: left;
+  font-size: 12px;
+  font-style: italic;
+  margin: 10px 0px 0px 430px;
+}
+
+.ui-menu .ui-menu-item a {
+  font-size: 12px;
+}
+
+.input {
+  float:left;
+}

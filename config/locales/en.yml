@@ -3,3 +3,14 @@
 
 en:
   hello: "Hello world"
+  upload_translate: "Upload a Document to Translate"
+  home: "Home"
+  contact: "Contact"
+  upload: "Upload"
+  signin: "Sign In"
+  search: "Search"
+  signup: "Sign Up"
+  contribute: "Contribute"
+  about: "About"
+
+
