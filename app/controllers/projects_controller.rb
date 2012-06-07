@@ -13,6 +13,7 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    1.times { @project.documents.build }
   end
 
   def create

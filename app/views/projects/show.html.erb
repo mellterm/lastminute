@@ -6,6 +6,19 @@
 </p>
 
 <p>
+	<% if @project.documents %>
+  		<strong>Documents:</strong>
+  		<ul>
+  			<% for doc in @project.documents %>
+     
+      				<li><%= doc.name %> </li>
+      				<li><%= doc.data.url %></li>
+     	</ul>
+        <% end %>
+  	<% end %>		
+</p>	
+
+<p>
   <%= link_to "Edit", edit_project_path(@project) %> |
   <%= link_to "Destroy", @project, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All", projects_path %>

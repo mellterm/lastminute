@@ -1,8 +1,13 @@
-<%= form_for @project do |f| %>
+<%= nested_form_for @project, :html => { :multipart => true }  do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </p>
+  <%= f.fields_for :documents do |builder| %>
+      <%= render 'document_fields', :f => builder %>
+  <% end %>
+
+ <p><%= f.link_to_add "Add a document", :documents %></p>
   <p><%= f.submit %></p>
 <% end %>

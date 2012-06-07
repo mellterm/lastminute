@@ -13,5 +13,9 @@ en:
   signup: "Sign Up"
   contribute: "Contribute"
   about: "About"
+  name: "Name"
+  url: "URL"
+  document_name: "Document Name"
+
 
 

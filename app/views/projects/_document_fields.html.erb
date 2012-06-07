@@ -1,0 +1,14 @@
+ 
+  <p>
+    <%= f.label :name, t(:document_name) %><br />
+    <%= f.text_field :name %>
+  </p>
+   <p>
+    <%= f.label :url, t(:url) %><br />
+    <%= f.text_field :url %>
+  </p>
+  <%= f.file_field :data %>
+  <p>
+    <%= f.link_to_remove "Remove this document" %>
+  </p> 
+

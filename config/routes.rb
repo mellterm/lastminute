@@ -8,6 +8,8 @@ Lastminute::Application.routes.draw do
 
   root to: 'static_pages#home'
 
+   match '/upload', to: 'projects#new'
+
 
   match '/about', to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'

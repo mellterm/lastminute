@@ -5,6 +5,8 @@ gem 'bootstrap-sass', '2.0.0'
 gem 'devise'
 gem 'omniauth-google'
 gem 'omniauth-openid'
+gem "paperclip", "~> 3.0"
+gem "nested_form"
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development do
