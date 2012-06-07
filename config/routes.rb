@@ -1,4 +1,11 @@
 Lastminute::Application.routes.draw do
+  
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
+  resources :projects do
+    resources :documents  
+  end 
+
   root to: 'static_pages#home'
 
 

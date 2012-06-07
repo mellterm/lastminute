@@ -2,10 +2,15 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
 gem 'bootstrap-sass', '2.0.0'
+gem 'devise'
+gem 'omniauth-google'
+gem 'omniauth-openid'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development do
 	gem 'sqlite3', '1.3.5'
+	gem 'nifty-generators'
+	gem 'thin'
 end
 
 
@@ -41,3 +46,5 @@ gem 'jquery-rails', '2.0.0'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+gem "mocha", :group => :test

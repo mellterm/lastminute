@@ -9,7 +9,12 @@
 					<ul class="nav pull-right">
 						<li><%= link_to t(:home), root_path %></li>
 						<li><%= link_to t(:upload), '#' %></li>
-						<li><%= link_to t(:signin), signin_path %></li>
+  						<% if user_signed_in? %>
+    						<li><%= link_to t(:signout), destroy_user_session_path, :method => :delete %></li>
+  						<% else %>
+    						<li><%= link_to t(:signin), new_user_registration_path %></li> 
+    						<li><%= link_to  t(:signup), new_user_session_path %></li>
+  						<% end %>
 					</ul>
 				</nav>
 			</div>

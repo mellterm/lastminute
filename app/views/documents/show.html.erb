@@ -1,0 +1,20 @@
+<% title "Document" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @document.name %>
+</p>
+<p>
+  <strong>Project:</strong>
+  <%= @document.project_id %>
+</p>
+<p>
+  <strong>Url:</strong>
+  <%= @document.url %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_document_path(@document) %> |
+  <%= link_to "Destroy", @document, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", documents_path %>
+</p>
